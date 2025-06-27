@@ -1,0 +1,19 @@
+# Ignore compiled class files
+*.class
+
+# Ignore build output directories
+/out/
+bin/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore system files (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Ignore temporary or backup files
+*.log
+*.tmp
+*.bak
+*.swp

@@ -11,38 +11,48 @@
 import java.util.Scanner;
 
 public class ComparisonOperators {
-  public static void main(String[] args) {
-    int numberOne;
-    int numberTwo;
-    Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        int numberOne;
+        int numberTwo;
+        int numberThree;
+        int numberFour;
 
-    System.out.println("Please enter the first number");
-    numberOne = scanner.nextInt();
+        boolean isGreater;
+        boolean isDifferent;
+        boolean isDivisibleByTwo;
 
-    System.out.println("Please enter the second number");
-    numberTwo = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
 
-    System.out.println(
-        "The number " + numberOne + " is greater than " + numberTwo + " = " + (numberOne > numberTwo));
-    scanner.close();
-    System.out.println(
-        "The number " + numberOne + " is different than " + numberTwo + " = " + (numberOne != numberTwo));
-    scanner.close();
-    System.out.println(
-        "The number " + numberOne + " is divisible by " + numberTwo + " = " + (numberOne % numberTwo == 0));
+        System.out.println("Please enter the first number:");
+        numberOne = scanner.nextInt();
+        System.out.println("Please enter the second number:");
+        numberTwo = scanner.nextInt();
 
-    System.out.println("Please enter another number");
-    numberOne = scanner.nextInt();
+        isGreater = numberOne > numberTwo;
+        isDifferent = numberOne != numberTwo;
+        isDivisibleByTwo = numberOne % 2 == 0;
 
-    System.out.println("Please enter another number again");
-    numberTwo = scanner.nextInt();
-    scanner.close();
+        System.out.println(
+                "Number " + numberOne + " is greater than " + numberTwo + " = " + isGreater);
+        System.out.println(
+                "Number " + numberOne + " is different from " + numberTwo + " = " + isDifferent);
+        System.out.println(
+                "Number " + numberOne + " is divisible by 2 ? = " + isDivisibleByTwo);
 
-    // A. Si el número 1 es mayor al número 2 y si el número 3 es mayor al número 4.
-// B. Si el número 1 es mayor al número 2 o si el número 3 es mayor al número 4.
-    System.out.println(
-      "The number " + numberOne + ""
-    );
+        System.out.println("Please enter the third number:");
+        numberThree = scanner.nextInt();
+        System.out.println("Please enter the fourth number:");
+        numberFour = scanner.nextInt();
+        scanner.close();
 
-  }
+        System.out.println(
+                "Number " + numberOne + " is greater than number " + numberTwo + " and number "
+                        + numberThree
+                        + " is greater than " + numberFour + "?  === "
+                        + (numberOne > numberTwo && numberThree > numberFour));
+        System.out.println(
+                "Number " + numberOne + " is greater than number " + numberTwo + " or number " + numberThree
+                        + " is greater than " + numberFour + "?  === "
+                        + (numberOne > numberTwo || numberThree > numberFour));
+    }
 }

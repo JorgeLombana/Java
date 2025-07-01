@@ -21,9 +21,15 @@ public class Calculator {
 
     System.out
         .print(
-            "Now, please enter the operation you would like to do:\n  1: sum, 2: rest, 3: division, 4: multiplication");
+            "Now, please enter the operation you would like to do:\n  1: sum, 2: rest, 3: division, 4: multiplication: ");
     operationNumberSelected = scanner.nextInt();
-    result = operationNumberSelected == 1 ? () : (2);
+    scanner.close();
 
+    result = operationNumberSelected == 1 ? numberOne + numberTwo
+        : (operationNumberSelected == 2 ? numberOne - numberTwo
+            : (operationNumberSelected == 3 ? numberOne / numberTwo
+                : numberOne * numberTwo));
+
+    System.out.println("The result is: " + result);
   }
 }
